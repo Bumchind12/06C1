@@ -1,4 +1,4 @@
-#define PIN_LED 7
+#define PIN_LED 9
 
 int p, cycle;
 
@@ -7,12 +7,12 @@ void set_period(int period) {
 }
 
 void set_duty(int duty) {
-  int dly = p / 100 * duty;
+  int dlay = p / 100 * duty;
   digitalWrite(PIN_LED, 0);
-  delayMicroseconds(dly);
+  delayMicroseconds(dlay);
   
   digitalWrite(PIN_LED, 1);
-  delayMicroseconds(p - dly);
+  delayMicroseconds(p - dlay);
 }
 
 void setup() {
